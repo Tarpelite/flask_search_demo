@@ -1,7 +1,8 @@
 FROM pytorch/pytorch:1.10.0-cuda11.3-cudnn8-runtime
-RUN "echo nvidia-smi"
-RUN "git clone https://github.com.cnpmjs.org/Tarpelite/flask_search_demo.git"
-RUN "cd flask_search_demo"
-RUN "git checkout dev"
-RUN "pip install -r requirements.txt"
-RUN "python app.py"
+RUN apt update
+RUN apt install git -y
+RUN git clone https://github.com.cnpmjs.org/Tarpelite/flask_search_demo.git
+WORKDIR /workspace/flask_search_demo
+RUN git checkout dev
+RUN pip install -r requirements.txt
+RUN python app.py
