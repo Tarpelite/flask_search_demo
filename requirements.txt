@@ -1,8 +1,8 @@
 # This file may be used to create an environment using:
 # $ conda create --name <env> --file <this file>
 # platform: linux-64
-sentence-transformers=2.1.0
-faiss-gpu=1.7.2
-torch=1.10.1+cu113
-flask=2.0.2
+sentence-transformers==2.1.0
+faiss-gpu==1.7.2
+torch==1.10.1+cu113
+flask==2.0.2
 
